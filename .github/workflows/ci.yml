@@ -34,5 +34,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Audit dependencies
+        run: npm audit --audit-level=moderate
+
+      - name: Check outdated dependencies
+        run: npm outdated
+
       - name: Public surface check
         run: npm run public:check
