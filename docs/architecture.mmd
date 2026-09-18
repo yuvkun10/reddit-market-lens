@@ -1,0 +1,12 @@
+flowchart TD
+    A["User-provided Reddit export, CSV, or pasted text"] --> B["Importer"]
+    B --> C["Normalized post and comment corpus"]
+    C --> D["Deterministic keyword clustering"]
+    C --> E["Representative quote extraction"]
+    D --> F["Pain points, personas, outcomes, objections"]
+    E --> F
+    F --> G{"Optional OpenAI synthesis?"}
+    G -->|"No API key or flag"| H["Deterministic summary"]
+    G -->|"--openai with OPENAI_API_KEY"| I["OpenAI synthesis with store=false"]
+    H --> J["Markdown or JSON report"]
+    I --> J

@@ -161,7 +161,7 @@ npm run public:check
 git diff --check
 ```
 
-## Codebase Structure
+## Repository map
 
 ```text
 src/cli.ts                  CLI argument parsing, env loading, stdin/file IO
@@ -196,3 +196,7 @@ This repository is intended to stay public-safe:
 - `.env.example` is tracked as a safe template.
 - Local agent notes, Obsidian folders, `.codex`, env files, source exports, and generated workflow logs should remain untracked.
 - Commits and project docs should stay free of attribution markers, generated-by language, bot trailers, and secrets.
+
+## Documentation
+
+- [Architecture diagram source](docs/architecture.mmd)
